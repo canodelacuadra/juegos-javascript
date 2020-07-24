@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Aprender el DoM</title>
+    
+    <style>
+        @font-face {
+          font-family: "blackjack";
+          src: url("fonts/1942.ttf");
+        }
+        @font-face {
+      font-family: "carta";
+          src: url("fonts/cards-webfont.woff");
+        }
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body {
+          font-family: "blackjack";
+        }
+        #container{
+          width:90%;
+          color:pink; 
+            margin:0 auto;
+        }
+        h1{ 
+            color:black;
+        text-align: center;
+        }
+        #display{
+            background-color: #333;
+            color:lime;
+             min-height: 50px;
+             text-align: center;
+            font-size:40px;
+            
+        }
+        #tapete{
+          background-color:darkgreen;
+          color:black; 
+            min-height: 400px;
+         
+        }
+        #croupier, #jugador{
+            display:inline-block;
+            width:40%;
+            text-align:center;
+        }
+      
+        button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+        @keyframes apareceCarta{
+            from{
+               top:-100px;
+                left:-100px;
+                opacity:0;
+                
+            }
+            to{
+                top:0;
+                left:0;
+                opacity:1;
+                
+            }
+        }
+        
+        #tapete img{
+             position:relative;
+            
+            animation: apareceCarta;
+            animation-duration: 2s;
+        } 
+        .cartalista{
+            width:75px;
+        }
+    </style>
+</head>
+<body>
+   <div id="container">
+     <h1> Carta más alta</h1>
+      <div id="botones">
+          <button id='cartaA'  type='button'>start  </button>
+          <button id='mostrarB'type='button'>Mostrar Baraja  </button>
+      </div>
+       <div id="display">
+           Bienvenidos a nuestros juegos ONLINE
+       </div>
+       <div id="tapete">
+           <div id="croupier">
+<!--             <img src='baraja-svg/10_of_clubs.svg'>-->
+           </div>
+           <div id="jugador">
+<!--               <img src='baraja-svg/10_of_clubs.svg'>-->
+           </div>
+       </div>
+       
+       
+   </div>
+  <script src='biblioteca.js'></script>
+  <script src='baraja.js'></script>
+    <script src='jugador.js'></script> 
+  <script src='croupier.js'></script> 
+
+  <script src='carta-mas-alta.js'></script>
+    <script src='mostrarBaraja.js'></script>    
+</body>
+</html>
